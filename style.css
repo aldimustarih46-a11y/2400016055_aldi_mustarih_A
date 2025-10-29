@@ -1,104 +1,169 @@
-#app {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr 2fr;
-  min-height: 100vh;
-  background-color: #1276da;
-  gap: 10px;
+/* --- Gaya dasar --- */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+  color: #222;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+/* Header */
+header {
+  background: #1276da;
   color: white;
-  font-family: Arial, sans-serif;
-}
-
-header, footer {
-  grid-column: 1 / 3;
-  background-color: #0b5aa5;
-  padding: 15px;
-  text-align: center;
-}
-
-.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
 }
 
-.menu {
-  display: flex;
-  gap: 20px;
-  list-style: none;
+header h1 {
+  margin: 0;
 }
 
-.menu a {
+nav a {
   color: white;
   text-decoration: none;
+  margin-right: 1rem;
 }
 
-.menu a:hover {
+nav a:hover {
   text-decoration: underline;
 }
 
-main {
+nav button {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.4rem 0.5rem;
+  cursor: pointer;
+}
+
+/* --- Layout utama pakai GRID --- */
+.container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 15px;
-  padding: 10px;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+  padding: 2rem;
 }
 
+/* Sidebar */
 .sidebar {
-  background-color: #0c4f8a;
+  background: #e9f2ff;
+  padding: 1.5rem;
   border-radius: 10px;
-  padding: 15px;
 }
 
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 0.5rem 0;
+}
+
+/* Konten utama */
 .content {
-  background-color: #5f97cf;
-  border-radius: 15px;
-  padding: 20px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.profil {
+/* Profil */
+.profile {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.profil img {
-  width: 200px;
+.profile img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-text h2 {
+  margin: 0 0 0.5rem;
+}
+
+/* Portfolio grid */
+.portfolio-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.portfolio-items img {
+  width: 100%;
   border-radius: 10px;
+  transition: transform 0.3s;
 }
 
-.cards {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 15px;
-  gap: 10px;
+.portfolio-items img:hover {
+  transform: scale(1.05);
 }
 
-.card {
-  background-color: #0b5aa5;
-  padding: 20px;
-  border-radius: 10px;
-  width: 120px;
+/* Ubah warna section */
+.warna {
+  margin-top: 2rem;
+}
+
+.warna button {
+  background: #1276da;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.warna button:hover {
+  background: #0d5cad;
+}
+
+/* Footer */
+footer {
   text-align: center;
+  padding: 1rem;
+  background: #1276da;
+  color: white;
+  margin-top: 2rem;
 }
 
+/* Dark mode */
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+.dark-mode header {
+  background-color: #333;
+}
+
+.dark-mode footer {
+  background-color: #333;
+}
+
+.dark-mode .sidebar {
+  background-color: #2a2a2a;
+}
+
+.dark-mode .content {
+  background-color: #252525;
+}
+
+/* --- Responsif --- */
 @media (max-width: 768px) {
-  #app {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-  }
-
-  main {
+  .container {
     grid-template-columns: 1fr;
   }
-
-  .profil {
+  .profile {
     flex-direction: column;
     text-align: center;
-  }
-
-  .cards {
-    flex-direction: column;
   }
 }

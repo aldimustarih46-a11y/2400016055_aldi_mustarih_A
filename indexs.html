@@ -6,57 +6,64 @@
   <title>Portofolio Aldi Mustarih</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div id="app">
-    <header>
-      <nav class="navbar">
-        <div class="logo">Aldi Mustarih</div>
-        <ul class="menu">
-          <li><a href="#">Beranda</a></li>
-          <li><a href="#">Tentang</a></li>
-          <li><a href="#">Kontak</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header>
+    <h1>Aldi Mustarih</h1>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Tentang</a>
+      <a href="#">Kontak</a>
+      <button id="themeBtn">🌗</button>
+    </nav>
+  </header>
 
-    <main>
-      <aside class="sidebar">
-        <h3>Hobi Saya:</h3>
-        <ul>
-          <li>Bermain bulu tangkis</li>
-          <li>Modifikasi motor</li>
-          <li>Membuat video sinematik</li>
-        </ul>
-      </aside>
+  <main class="container">
+    <aside class="sidebar">
+      <h3>Hobi Saya</h3>
+      <ul>
+        <li>🏸 Bermain bulu tangkis</li>
+        <li>🔧 Modifikasi motor</li>
+        <li>🎥 Membuat video sinematik</li>
+      </ul>
+    </aside>
 
-      <section class="content">
-        <div class="profil">
-          <img src="https://i.imgur.com/9RUGHOA.jpeg" alt="Foto Profil">
-          <div class="bio">
-            <h2>Mahasiswa sistem Informasi</h2>
-            <p>
-              Halo! Saya adalah seorang mahasiswa sistem informasi yang bersemangat belajar tentang pengembangan web. 
-              Meskipun saya belum sepenuhnya paham tentang dunia web, saya terus belajar agar bisa menguasainya dengan baik.
-            </p>
-            <p>
-              Kunjungi profil Instagram saya 
-              <a href="https://www.instagram.com/" target="_blank">disini</a>
-            </p>
-          </div>
+    <section class="content">
+      <div class="profile">
+        <img src="WhatsApp Image 2025-10-09 at 22.56.56_f4b15a5d.jpg" alt="Foto Profil">
+        <div class="profile-text">
+          <h2>Mahasiswa Sistem Informasi</h2>
+          <p>
+            Halo! Saya adalah seorang mahasiswa sistem informasi yang bersemangat belajar tentang pengembangan web.
+            Meskipun saya belum sepenuhnya paham dunia web, saya terus belajar agar bisa menguasainya dengan baik.
+          </p>
+          <p>Kunjungi profil Instagram saya <a href="#">disini</a>.</p>
         </div>
+      </div>
 
-        <h3>Portofolio Saya:</h3>
-        <div class="cards">
-          <div class="card">gapunya fotonya</div>
-          <div class="card">gapunya fotonya</div>
-          <div class="card">gapunya fotonya</div>
+      <div class="portfolio">
+        <h3>Profil Sosial Media Saya</h3>
+        <div class="portfolio-items">
+          <img src="WhatsApp Image 2025-10-22 at 13.25.31_595d5e0c.jpg" alt="">
+          <img src="WhatsApp Image 2025-10-22 at 13.25.31_88d6853d.jpg" alt="">
         </div>
-      </section>
-    </main>
+      </div>
 
-    <footer>
-      <p>&copy; 2025 Aldi Mustarih | Semua Hak Dilindungi</p>
-    </footer>
-  </div>
+      <div class="warna">
+        <h4>Ubah Warna</h4>
+        <button onclick="ubahwarna()">Dark Mode</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Aldi Mustarih | Semua Hak Dilindungi
+  </footer>
+
+  <script>
+    function ubahwarna() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </body>
 </html>
