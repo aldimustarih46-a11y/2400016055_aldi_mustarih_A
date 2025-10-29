@@ -1,0 +1,184 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1; /* Ini yang dorong footer ke bawah */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Segoe UI, sans-serif;
+  background: #eaf2ff;
+  color: #222;
+  transition: .3s;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+/* Header */
+header {
+  background: #1276da;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+.tema-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* Layout Grid */
+.layout {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 1.5rem;
+  padding: 1.2rem;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #d3e4ff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.sidebar input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  margin-top: .5rem;
+}
+
+.sidebar button {
+  width: 100%;
+  margin-top: .5rem;
+}
+
+#daftarTugas li {
+  background: white;
+  padding: 5px;
+  border-radius: 6px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Konten utama */
+.content {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px #0002;
+}
+
+.profile {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.profile img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform .3s, box-shadow .3s;
+  transform: scale(1.04);
+  box-shadow: 0 0 5px black;
+}
+
+.portfolio-items {
+  display: flex;
+  gap: 10px;
+}
+.portfolio-items img {
+  width: 170px;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  margin-top: 1rem;
+  background: #1276da;
+  color: white;
+}
+
+.sosmed {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .3s, box-shadow .3s;
+  box-shadow: 0 0 3px black;
+}
+
+.sosmed:hover {
+  transform: scale(1.10);
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+}
+
+
+
+/* Dark mode */
+.dark {
+  background: #1c1c1c;
+  color: white;
+}
+.dark .sidebar {
+  background: #333;
+}
+.dark .content {
+  background: #2b2b2b;
+}
+.dark footer {
+  height: 100%;
+  background: #444;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+  .portfolio-items {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
