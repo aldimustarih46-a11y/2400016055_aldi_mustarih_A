@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+		<script>
+	tailwind.config = {
+	theme: {
+		extend: {}
+	}
+	}
+	</script>
+
+	<style>
+	.btn {
+		@apply bg-gray-200 text-black p-3 rounded-xl text-lg font-medium;
+	}
+	.btn-op {
+		@apply bg-gray-300 p-3 rounded-xl text-black text-lg font-semibold;
+	}
+	.btn-red {
+		@apply bg-red-500 text-white p-3 rounded-xl font-bold;
+	}
+	.btn-blue {
+		@apply bg-blue-500 text-white p-3 rounded-xl font-bold;
+  }
+</style>
+
+</head>
+<body class="bg-gray-100 min-h-screen flex justify-center items-center">
+
+    <div class="bg-white p-6 rounded-2xl shadow-lg w-72 text-center">
+        <h2 class="text-lg font-semibold mb-3 flex items-center justify-center gap-2">
+            <span>🧮</span> Calculator
+        </h2>
+
+        <div id="display" class="bg-gray-50 border rounded-xl p-4 text-right text-2xl font-bold mb-4">
+            0
+        </div>
+
+        <div class="grid grid-cols-4 gap-2">
+            <button class="btn-red" onclick="clearDisplay()">C</button>
+            <button class="btn-op" onclick="appendSymbol('/')">÷</button>
+            <button class="btn-op" onclick="appendSymbol('*')">×</button>
+            <button class="btn-op" onclick="appendSymbol('-')">−</button>
+
+            <button class="btn" onclick="appendNumber(7)">7</button>
+            <button class="btn" onclick="appendNumber(8)">8</button>
+            <button class="btn" onclick="appendNumber(9)">9</button>
+            <button class="btn-op" onclick="appendSymbol('+')">+</button>
+
+            <button class="btn" onclick="appendNumber(4)">4</button>
+            <button class="btn" onclick="appendNumber(5)">5</button>
+            <button class="btn" onclick="appendNumber(6)">6</button>
+            <button rowspan="3"></button>
+
+            <button class="btn" onclick="appendNumber(1)">1</button>
+            <button class="btn" onclick="appendNumber(2)">2</button>
+            <button class="btn" onclick="appendNumber(3)">3</button>
+
+            <button class="btn" onclick="appendNumber(0)">0</button>
+            <button class="btn" onclick="appendSymbol('.')">.</button>
+
+            <button class="btn-blue col-span-2" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script src="dom.js"></script>
+</body>
+</html>

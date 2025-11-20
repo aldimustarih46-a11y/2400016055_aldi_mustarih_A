@@ -1,0 +1,221 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Apollo — Learn, Build & Showcase</title>
+
+  <!-- Tailwind CDN (utility-first) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Optional: set some Tailwind config (font sizes, container) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            accent: '#eef2ff',
+            darkbg: '#051225'
+          },
+          borderRadius: {
+            xl: '12px'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <header class="bg-transparent sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <div class="text-primary font-extrabold text-lg">APOLLO</div>
+        <!-- desktop nav -->
+        <nav class="hidden md:flex gap-6 text-sm text-slate-600">
+          <a href="#features" class="hover:text-slate-800">Features</a>
+          <a href="#pricing" class="hover:text-slate-800">Pricing</a>
+          <a href="#contact" class="hover:text-slate-800">Contact</a>
+        </nav>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button class="hidden md:inline-block px-4 py-2 rounded-lg border border-slate-200 text-sm">Login</button>
+        <a href="#get-started" class="hidden md:inline-block px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold">Get Started</a>
+
+        <!-- mobile hamburger -->
+        <button id="hamburger" class="md:hidden p-2 rounded-md focus:outline-none" aria-label="Toggle menu">
+          <svg id="hamburger-open" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="hamburger-close" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-slate-100">
+      <div class="px-6 py-4 space-y-3">
+        <a href="#features" class="block text-slate-700">Features</a>
+        <a href="#pricing" class="block text-slate-700">Pricing</a>
+        <a href="#contact" class="block text-slate-700">Contact</a>
+        <div class="pt-2">
+          <button class="w-full mb-2 px-4 py-2 rounded-lg border border-slate-200">Login</button>
+          <a href="#get-started" class="w-full block text-center px-4 py-2 rounded-lg bg-primary text-white font-semibold">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="max-w-6xl mx-auto px-6 py-12 md:py-20">
+      <div class="md:flex md:items-center md:gap-12">
+        <div class="md:flex-1">
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-tight">
+            LEARN, BUILD, &amp; SHOWCASE<br class="hidden md:inline" />ALL IN ONE PLATFORM
+          </h1>
+          <p class="mt-4 text-slate-600 max-w-xl">
+            Apollo membantu Anda belajar manajemen, membangun project, dan menampilkan
+            portfolio — semua dalam satu platform yang mudah digunakan.
+          </p>
+
+          <div class="mt-6 flex gap-3">
+            <a id="get-started" href="#get-started" class="inline-flex items-center px-4 py-2 rounded-lg bg-primary text-white font-semibold">Get Started Free</a>
+            <button class="inline-flex items-center px-4 py-2 rounded-lg border border-slate-200">Explore Features</button>
+          </div>
+        </div>
+
+        <!-- hero illustration -->
+        <div class="md:w-96 mt-8 md:mt-0 flex-shrink-0">
+          <!-- Using uploaded image path as required -->
+          <img src="/mnt/data/47708b5a-de96-4cdf-aaee-630987e9f835.png" alt="hero illustration" class="w-full rounded-2xl shadow-lg" />
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="bg-white">
+      <div class="max-w-6xl mx-auto px-6 py-12">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-xl font-bold">What You'll Get With Apollo</h2>
+          <p class="text-slate-600 mt-2">A proven full-featured workflow to help you learn, build, and showcase your work.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- card 1 -->
+          <article class="p-6 bg-slate-50 rounded-xl shadow-sm">
+            <!-- small icon (inline SVG) -->
+            <div class="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-sm">
+              <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="mt-4 font-semibold">Learning Management</h3>
+            <p class="mt-2 text-sm text-slate-600">Materi terstruktur, modul interaktif, dan tracking progress yang mudah dipantau.</p>
+          </article>
+
+          <!-- card 2 -->
+          <article class="p-6 bg-slate-50 rounded-xl shadow-sm">
+            <div class="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-sm">
+              <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h6l3 14 4-10 3 6h4"></path>
+              </svg>
+            </div>
+            <h3 class="mt-4 font-semibold">Project Management</h3>
+            <p class="mt-2 text-sm text-slate-600">Atur tugas, milestone, dan kolaborasi tim dengan fitur yang intuitif.</p>
+          </article>
+
+          <!-- card 3 -->
+          <article class="p-6 bg-slate-50 rounded-xl shadow-sm">
+            <div class="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-sm">
+              <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-5-9-5-9 5 9 5z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12l9-5-9-5-9 5 9 5z"></path>
+              </svg>
+            </div>
+            <h3 class="mt-4 font-semibold">Portfolio Showcase</h3>
+            <p class="mt-2 text-sm text-slate-600">Tampilkan hasil kerja terbaikmu dengan template yang profesional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="max-w-6xl mx-auto px-6 py-8">
+      <div class="bg-accent rounded-xl p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <h3 class="font-semibold text-lg">Ready to Launch Your Journey?</h3>
+          <p class="text-slate-600 mt-1">Bergabung sekarang dan mulai bangun project pertamamu.</p>
+        </div>
+        <div>
+          <a href="#get-started" class="inline-block px-5 py-3 rounded-lg bg-primary text-white font-semibold">Get Started Free</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-darkbg text-white mt-10">
+    <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row md:justify-between md:items-start gap-6">
+      <div>
+        <div class="font-extrabold text-xl">APOLLO</div>
+        <p class="mt-2 text-slate-300 text-sm">© 2025 Apollo — All rights reserved.</p>
+      </div>
+      <div class="flex gap-8">
+        <div class="text-sm">
+          <h4 class="font-semibold">Company</h4>
+          <ul class="mt-2 space-y-2 text-slate-300">
+            <li><a href="#" class="hover:underline">About</a></li>
+            <li><a href="#" class="hover:underline">Careers</a></li>
+            <li><a href="#" class="hover:underline">Terms</a></li>
+          </ul>
+        </div>
+        <div class="text-sm">
+          <h4 class="font-semibold">Resources</h4>
+          <ul class="mt-2 space-y-2 text-slate-300">
+            <li><a href="#" class="hover:underline">Docs</a></li>
+            <li><a href="#" class="hover:underline">Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript: only for hamburger menu (mobile) -->
+  <script>
+    (function(){
+      const btn = document.getElementById('hamburger');
+      const menu = document.getElementById('mobileMenu');
+      const openIcon = document.getElementById('hamburger-open');
+      const closeIcon = document.getElementById('hamburger-close');
+
+      btn?.addEventListener('click', function () {
+        const isHidden = menu.classList.contains('hidden');
+        if (isHidden) {
+          menu.classList.remove('hidden');
+          openIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+        } else {
+          menu.classList.add('hidden');
+          openIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        }
+      });
+
+      menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        openIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }));
+    })();
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tebak Angka</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Tebak Angka</h2>
+    <p>Pilih angka antara 1 sampai 20. Tebak dulu!</p>
+
+    <input type="number" id="guess" placeholder="Infokan angka..." min="1" max="20">
+
+    <button id="btnGuess">Tebak</button>
+    <button id="btnReset" style="display:none;">Main Lagi</button>
+
+    <p class="info">Hanya ada <span id="attempts">20</span> kesempatan ya.</p>
+    <p class="result" id="result"></p>
+</div>
+
+<script src="dom.js"></script>
+</body>
+</html>

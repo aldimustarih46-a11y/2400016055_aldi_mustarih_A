@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #1e1e1e;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-container {
+    background: #262626;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 340px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+#btnGenerate {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+#btnGenerate:hover {
+    background-color: rgb(91, 90, 90);
+}
+
+#quoteText {
+    color: #ffbfbf;
+    font-size: 18px;
+    margin-top: 15px;
+    min-height: 50px;
+}
